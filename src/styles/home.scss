@@ -10,6 +10,7 @@
     justify-content: center;
     position: absolute;
 
+
     .summary-text {
         display: flex;
         flex-grow: 1;
@@ -68,6 +69,9 @@
                 position: absolute;
                 right: 27.4%;
                 bottom: 11%;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #000;
+
             }
             .office-text {
                 
@@ -97,6 +101,8 @@
                 position: absolute;
                 left: 15%;
                 bottom: 11%;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #000;
             }
             .gallery-text {
                 

@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Marvel-font';
+    src: url('../assets/fonts/MarvelRegular-Dj83.ttf') format('truetype');
+}
+
+#gallery {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .side-bar{
+        
+        top: 8vh;
+        position: fixed;
+        width: 20%;
+        height: 92vh;
+
+        display: flex;
+        flex: 1 1 auto;
+        
+        display: flex;
+        justify-content: center;        
+
+        background-color: #2C3859;
+
+        border: 2px solid #2C3859;
+        border-radius: 0 0 4vh 0;
+
+        .side-bar-text {
+
+            display: flex;
+            align-items: center;
+
+            width: 50%;
+
+            font-family: 'Roboto';
+            font-size: 3vh;
+            text-align: center;
+        }
+    }
+    .main-content {
+
+        display: inline;
+        margin-left: 30%;
+
+        .character-icon {
+            
+            margin-right: 0;
+            width: 20vh;
+            height: 25vh;
+            background-color: red;
+
+            img {
+                height: 21.5vh;
+                width: 18.75vh;
+            }
+            h1{
+                font-family: 'Marvel';
+                font-size: 3vh;
+            }
+        }
+    }
+}
