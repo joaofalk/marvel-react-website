@@ -41,23 +41,45 @@
     }
     .main-content {
 
-        display: inline;
-        margin-left: 30%;
+        display: flex;
+        margin-left: 25%;
+        margin-top: 8vh;
 
+        flex-wrap: wrap;
+        width: 150vh;
+        height: 100%;
+
+        align-content: center;
         .character-icon {
-            
-            margin-right: 0;
-            width: 20vh;
-            height: 25vh;
+
+            margin: 8vh;
+            height: 26.5vh;
+            width: 18.75vh;
             background-color: red;
+            
+            border: 0px solid;
+            border-radius: 4vh;
+
 
             img {
                 height: 21.5vh;
                 width: 18.75vh;
+                border-radius: 3.9vh 3.9vh 0 0;
             }
             h1{
+                max-height: 5vh;
+                max-width: 15vh;
+
                 font-family: 'Marvel';
                 font-size: 3vh;
+                
+                margin-left: 2vh;
+
+                text-align: center;
+                white-space: nowrap;
+
+                overflow: hidden;
+                text-overflow: clip;
             }
         }
     }
