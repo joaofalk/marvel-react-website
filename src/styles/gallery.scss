@@ -6,16 +6,17 @@
 #gallery {
     
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: flex-start;
+    padding-top: 64px;
     
     .side-bar{
         
-        top: 8vh;
         position: fixed;
+        height: 100%;
         width: 20%;
-        height: 92vh;
 
+        padding-top: 64px;
         display: flex;
         flex: 1 1 auto;
         
