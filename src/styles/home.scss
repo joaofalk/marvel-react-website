@@ -4,49 +4,55 @@
 }
 
 #Homepage{
-    display: list-item;
-    width: 100%;
-    align-items: center;
+    
+    display: flex;
+    flex-wrap: wrap;
+
     justify-content: center;
-    position: absolute;
+    width: 100%;
 
 
     .summary-text {
-        display: flex;
-        flex-grow: 1;
+
+        display: inherit;
+
+        flex-flow: row wrap;
         margin-top: 8em;
         margin-left: auto;
+
+        height: 491px;
+        width: 866px;
+        padding: 10px 20px 20px 20px;
         
-        justify-content: flex-end;
+        background-image: url('/assets/images/comicbook.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
 
         img {
             height: 100%;
-            width: 50%;
         }
         .marvel-characters{
             
-            position: absolute;
-            right: 0%;
-            top: 15%;
+            font-size: 18px;
+            width: 100%;
+            height: fit-content;
             
-            font-size: 20px;
-            width: 23%;
-
+            padding-left: 445px;
             font-family: 'Roboto';
             color: #000;
         }
         .marvel-history{
-            
-            position: absolute;
-            right: 35.5%;
-            top: 49%;
 
-            width: 13%;
-            
-            font-family: 'Roboto';
+            align-self: flex-end;
+            width: 28%;
+            padding: 0 0 30px 0;
+
             font-size: 20px;
             color: #000;
+            font-family: 'Roboto';
             text-align: center;
+            justify-self: flex-start;
         }
     }
     .links{
@@ -55,6 +61,16 @@
         justify-content: space-around;
 
         .Oficina {
+
+            background-image: url('/assets/images/Oficina.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            height: 175px;
+            width: 574px;
+            padding: 20px;
+
             margin-right: 7.5em;
             display: inherit;
             justify-content: flex-end;
@@ -66,26 +82,31 @@
                 font-family: 'Marvel';
                 font-size: 40px;
 
-                position: absolute;
-                right: 27.4%;
-                bottom: 11%;
+                padding-left: 33%;
+
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: #000;
 
             }
             .office-text {
                 
-                position: absolute;
-                right: 17%;
-                bottom: 7%;
-
-                width: 15%;
+                padding-left: 33%;
 
                 font-family: 'Roboto';
                 color: #000;
+                width: 100%;
             }      
         }
         .Galeria {
+
+            background-image: url('/assets/images/Galeria.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            height: 175px;
+            width: 574px;
+            padding: 20px;
 
             margin-left: 7.5em;
             display: inherit;
@@ -98,22 +119,14 @@
                 font-family: 'Marvel';
                 font-size: 40px;
 
-                position: absolute;
-                left: 15%;
-                bottom: 11%;
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: #000;
             }
             .gallery-text {
-                
-                position: absolute;
-                left: 15%;
-                bottom: 4%;
-
-                width: 15%;
 
                 font-family: 'Roboto';
                 color: #000;
+                width: 70%;
             }      
         }
     }
