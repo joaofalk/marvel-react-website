@@ -13,7 +13,7 @@
     .side-bar{
         
         position: fixed;
-        height: 100%;
+        height: 93.5%;
         width: 20%;
 
         padding-top: 64px;
@@ -43,11 +43,11 @@
     .main-content {
 
         display: flex;
-        margin-left: 25%;
+        padding-left: 25%;
         margin-top: 8vh;
 
         flex-wrap: wrap;
-        width: 150vh;
+        width: 100%;
         height: 100%;
 
         align-content: center;

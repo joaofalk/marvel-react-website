@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 import '../styles/gallery.scss'
 const md5 = require('md5')
