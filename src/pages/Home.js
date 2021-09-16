@@ -1,9 +1,6 @@
 import React from "react"
 import { Link } from 'react-router-dom';
 
-import comicbook from '../assets/images/comicbook.png'
-import gallery from '../assets/images/Galeria.png'
-import office from '../assets/images/Oficina.png'
 
 import '../styles/home.scss'
 
