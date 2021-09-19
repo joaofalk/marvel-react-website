@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home } from './pages/Home';
 import Gallery from './pages/Gallery';
+import Office from './pages/Office';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header'
 
@@ -14,7 +15,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/galeria' exact component={Gallery} />
-          {/* <Route path='/oficina' exact component={Oficina} /> */}
+          <Route path='/oficina' exact component={Office} />
         </Switch>
       </div>
     </Router>
