@@ -22,7 +22,6 @@ function Gallery() {
     useEffect(() => {
         setLoading(true)
         setError(false)
-        // setSelectedCharacter([])
         let cancel
         let timestamp = Date.now()
         let hash = md5(`${timestamp}${process.env.REACT_APP_MARVEL_PRIVATE_KEY}${process.env.REACT_APP_MARVEL_PUBLIC_KEY}`)
@@ -50,7 +49,6 @@ function Gallery() {
         return () => cancel()
     }, [query, offsetNumber])
 
-    // useEffect(() => { }, [selectedCharacter])
 
     const observer = useRef()
     const lastCharElementRef = useCallback(node => {
@@ -92,7 +90,6 @@ function Gallery() {
         })
     }
 
-    console.log('Selected characted length: ', selectedCharacter.length);
     return (
         <div id='gallery'>
             <div className="side-bar">
@@ -104,14 +101,17 @@ function Gallery() {
                         <div className='character-data'>
                             <h1 className="character-name">{selectedCharacter.name}</h1>
                             <hr />
-                            <img src={selectedCharacter.thumbnail.path + '.' + selectedCharacter.thumbnail.extension} />
+                            <img src={selectedCharacter.thumbnail.path + '.' + selectedCharacter.thumbnail.extension} alt={selectedCharacter.name + '-icon'} />
                             <hr />
                             <h3 className='series-title'>Séries</h3>
                             <hr />
                             <div className='series-list'>
-                                {selectedCharacter.series.items.map((series) => (
-                                    <h6 className='series-name'>{series.name}</h6>
-                                ))}
+                                {selectedCharacter.series.items.length > 0
+                                    ? selectedCharacter.series.items.map((series) => (
+                                        <h6 className='series-name'>{series.name}</h6>
+                                    ))
+                                    : <h6 className='series-name'>Esse personagem não participou de nenhuma série ainda</h6>
+                                }
                             </div>
                         </div>
                     </Scrollbars>
@@ -128,18 +128,19 @@ function Gallery() {
                 {characters.map((character, index) => {
                     if (characters.length === index + 1) {
                         return <div className='character-icon' key={character.id} id={character.id} ref={lastCharElementRef} onClick={handleClick}>
-                            <img src={character.thumbnail.path + '.' + character.thumbnail.extension} />
+                            <img src={character.thumbnail.path + '.' + character.thumbnail.extension} alt={character.name + '-icon'} />
                             <h1>{character.name.toUpperCase()}</h1>
                         </div>
 
                     } else {
                         return <div className='character-icon' key={character.id} id={character.id} onClick={handleClick}>
-                            <img src={character.thumbnail.path + '.' + character.thumbnail.extension} />
+                            <img src={character.thumbnail.path + '.' + character.thumbnail.extension} alt={character.name + '-icon'} />
                             <h1>{character.name.toUpperCase()}</h1>
                         </div>
                     }
                 })}
             </div>
+
             <div>{loading && 'Loading...'}</div>
             <div>{error && 'Error'}</div>
         </div >
