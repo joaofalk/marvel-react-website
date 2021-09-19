@@ -11,7 +11,12 @@
     justify-content: center;
     width: 100%;
 
+    .custom-scrollbar {
+    
+        width: 100%;
+        height: 100%;
 
+}
     .summary-text {
 
         display: inherit;
@@ -79,7 +84,7 @@
                 height: 100%;
                     }
             .office-name{
-                font-family: 'Marvel';
+                font-family: 'Marvel-font';
                 font-size: 40px;
 
                 padding-left: 33%;
@@ -116,7 +121,7 @@
                 height: 100%;
                     }
             .gallery-name{
-                font-family: 'Marvel';
+                font-family: 'Marvel-font';
                 font-size: 40px;
 
                 -webkit-text-stroke-width: 1px;

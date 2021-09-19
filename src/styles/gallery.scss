@@ -79,6 +79,10 @@
                 margin-top: 20px;
             }
             .series-name{
+
+                font-family: 'Roboto';
+                font-weight: 400;
+
                 width: 100%;
                 text-align: center;
                 padding: 20px;
@@ -151,12 +155,13 @@
         height: 100%;
 
         align-content: center;
+        
         .character-icon {
 
             margin: 8vh;
             height: 26.5vh;
             width: 18.75vh;
-            background-color: red;
+            background-color:  #F0131E;
             
             border: 0px solid;
             border-radius: 4vh;
@@ -172,7 +177,7 @@
                 max-height: 5vh;
                 max-width: 15vh;
 
-                font-family: 'Marvel';
+                font-family: 'Marvel-font';
                 font-size: 3vh;
                 
                 margin-left: 2vh;
