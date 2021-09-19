@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'Marvel-font';
+    src: url('../assets/fonts/MarvelRegular-Dj83.ttf') format('truetype');
+}
+
+#office {
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 64px;
+    align-items: center;
+
+    .office-title {
+        
+        margin-top: 8vh;
+        height: fit-content;
+
+        font-size: 100px;
+        font-family: 'Marvel-font';
+
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+    }
+    .created-history {
+        width: 25%;
+        height: 3vh;
+        
+        padding-left: 10px;
+        background-color: #2C3859;
+
+        border-radius: 15px;
+        outline: none;
+
+    }
+    .form {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        width: 50%;
+        height: 100%;
+        .text-inputs {
+            display: block;
+            &::placeholder {
+                color: #fff;
+                font-family: 'Roboto';
+            }
+            outline: none;
+            &:focus::placeholder{
+                color: transparent;
+            }
+            margin: 20px;
+        }
+        
+        .hero-or-villain {
+            margin-top: 20px;
+            height: fit-content;
+            width: 100%;
+            text-align: center;
+
+            font-size: 40px;
+            font-family: 'Roboto';
+
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+        }
+        .fate-chooser {
+            display: flex;
+            justify-content: space-evenly;
+            
+            width: 100%;
+            align-self: center;
+            justify-items: center;
+            input:checked + .villain{
+                filter: grayscale(0);
+            }
+            input:focus + .hero{
+                filter: grayscale(0);
+            }
+            
+            .hero {
+    
+                display: block;
+                margin: 4vh 0vh 4vh 8vh;
+                height: 26.5vh;
+                width: 18.75vh;
+                background-color:  #F0131E;
+                
+                border: 0px solid;
+                border-radius: 4vh;
+    
+                filter: grayscale(100%);
+                img {
+                    height: 21.5vh;
+                    width: 18.75vh;
+                    border-radius: 3.9vh 3.9vh 0 0;
+                }
+                h1{
+                    max-height: 5vh;
+                    max-width: 15vh;
+    
+                    font-family: 'Roboto';
+                    font-size: 3vh;
+                    
+                    margin-left: 2vh;
+    
+                    text-align: center;
+                    white-space: nowrap;
+    
+                    overflow: hidden;
+                    text-overflow: clip;
+                }
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+            .hero-chosen {
+    
+                display: block;
+                margin: 4vh 0vh 4vh 8vh;
+                height: 26.5vh;
+                width: 18.75vh;
+                background-color:  #F0131E;
+                
+                border: 0px solid;
+                border-radius: 4vh;
+    
+                img {
+                    height: 21.5vh;
+                    width: 18.75vh;
+                    border-radius: 3.9vh 3.9vh 0 0;
+                }
+                h1{
+                    max-height: 5vh;
+                    max-width: 15vh;
+    
+                    font-family: 'Roboto';
+                    font-size: 3vh;
+                    
+                    margin-left: 2vh;
+    
+                    text-align: center;
+                    white-space: nowrap;
+    
+                    overflow: hidden;
+                    text-overflow: clip;
+                }
+            }
+            .villain {
+                display: block;
+    
+                margin: 4vh 8vh 4vh 0;
+                height: 26.5vh;
+                width: 18.75vh;
+                background-color:  #F0131E;
+                
+                border: 0px solid;
+                border-radius: 4vh;
+                filter: grayscale(100%);
+    
+    
+                img {
+                    height: 21.5vh;
+                    width: 18.75vh;
+                    border-radius: 3.9vh 3.9vh 0 0;
+                }
+                h1{
+                    max-height: 5vh;
+                    max-width: 15vh;
+    
+                    font-family: 'Roboto';
+                    font-size: 3vh;
+                    
+                    margin-left: 2vh;
+                    margin-bottom: 2vh;
+    
+                    text-align: center;
+                    white-space: nowrap;
+    
+                    overflow: hidden;
+                    text-overflow: clip;
+                }
+                &:hover{
+                    filter: grayscale(0);
+                }
+            }
+            .villain-chosen {
+                display: block;
+    
+                margin: 4vh 8vh 4vh 0;
+                height: 26.5vh;
+                width: 18.75vh;
+                background-color:  #F0131E;
+                
+                border: 0px solid;
+                border-radius: 4vh;
+    
+    
+                img {
+                    height: 21.5vh;
+                    width: 18.75vh;
+                    border-radius: 3.9vh 3.9vh 0 0;
+                }
+                h1{
+                    max-height: 5vh;
+                    max-width: 15vh;
+    
+                    font-family: 'Roboto';
+                    font-size: 3vh;
+                    
+                    margin-left: 2vh;
+                    margin-bottom: 2vh;
+    
+                    text-align: center;
+                    white-space: nowrap;
+    
+                    overflow: hidden;
+                    text-overflow: clip;
+                }
+
+            }
+            
+        }
+        #character-name {
+            width: 300px;
+            height: 35px;
+            
+            padding-left: 30px;
+            border-radius: 20px;
+            border-width: .5px;
+            border-color: black;
+            background-color: #2C3859;
+        }
+        #character-power {
+            width: 300px;
+            height: 35px;
+            
+            padding-left: 30px;
+            border-radius: 20px;
+            border-width: .5px;
+            border-color: black;
+            background-color: #2C3859;
+        }
+        #character-enemy {
+            width: 300px;
+            height: 35px;
+            
+            padding-left: 30px;
+            border-radius: 20px;
+            border-width: .5px;
+            border-color: black;
+            background-color: #2C3859;
+        }
+        .button-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+                
+                font-family: 'Marvel-font';
+                font-size: 20px;
+
+                width: 6vw;
+                height: 4vh;
+                
+                background-color:  #f0131e4d;
+                color: #fff;
+
+                border-radius: 10px;
+                border-width: 0;
+
+                margin-right: 20px;
+                margin-left: 20px;
+
+                &:hover {
+                    background-color:  #f0131e;
+                }
+            }
+        }
+    }
+}
